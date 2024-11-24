@@ -1,0 +1,21 @@
+<!-- konfirmasi.html -->
+
+{% extends "base.html" %}
+
+{% block title %}Konfirmasi Pemesanan{% endblock %}
+
+{% block content %}
+  <div class="container mx-auto p-6">
+    <h1 class="text-3xl font-bold mb-4">Konfirmasi Pemesanan Tiket</h1>
+
+    <p>Film: {{ tiket.jadwal.film.judul }}</p>
+    <p>Jumlah Tiket: 3 </p>
+    <p>Kursi yang Dipilih: A2, A3, A5</p>
+
+    <!-- Tampilkan QR Code -->
+    <div class="mt-6">
+      <h2 class="text-2xl font-semibold">QR Code Tiket:</h2>
+      <img src="{{ qr_code_url }}" alt="QR Code Tiket" class="w-40 h-40 mt-2">
+    </div>
+  </div>
+{% endblock %}
